@@ -28,6 +28,7 @@
 		document.getElementById("cue").style.display = "none";
 		document.getElementById("button1").style.display = "block";
 		localStorage.setItem(new Date().toLocaleString(),document.getElementById("search1").value);
+		document.getElementById("search1").value = null;
 	}
 	function deleteSome(){
 		var result = confirm('是否删除');
