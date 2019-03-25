@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+	<title>hw03</title>
+	<style>
+		.big{
+			width: 200px;
+			height: 45px;
+			border: 2px solid #fbc880;
+		}
+		.lit{
+			color: gray;
+			width: 140px;
+			height: 35px;
+		}
+	</style>
+</head>
+
+<script>
+	function searchSome(){
+		var str = document.createElement('span');
+		str.setAttribute("style","margin-left:8px;background-color:gray;line-height:25px;");
+		str.innerHTML = document.getElementById("search1").value;
+		document.getElementById("memo1").appendChild(str);
+		document.getElementById("cue").style.display = "none";
+		document.getElementById("button1").style.display = "block";
+		localStorage.setItem(new Date().toLocaleString(),document.getElementById("search1").value);
+	}
+	function deleteSome(){
+		var result = confirm('是否删除');
+		if(result){
+			localStorage.clear();
+			document.getElementById("cue").style.display = "block";
+			document.getElementById("button1").style.display = "none";
+			var arr = new Array();
+			var str1 = document.getElementsByTagName('span');
+			for(var i = 0;i < str1.length;i++){
+				arr.push(str1[i]);
+			}for(var i = 0;i < arr.length;i++){
+				arr[i].parentNode.removeChild(arr[i]);
+			}
+		}else{
+			alert('取消成功');
+		}
+	}
+</script>
+<body>
+	<div style="width: 500px;">
+		<input id="search1" type="search" name="goods" placeholder="请输入想查找的商品" class="big">
+		<input id="input1" type="button" value="搜索" onclick="searchSome()" class="lit">
+		<br>
+		<span>最近搜索</span>
+		<div id="memo1" style="width: 350px;word-wrap: break-word;"></div>
+		<input id="button1" type="button" value="X" onclick="deleteSome();" style="display: none;position: fixed;left: 370px;top: 110px;color: white;">
+		<p id="cue" style="display: block;">您的搜索记录会显示在此处</p>
+	</div>
+
+</body>
+</html>
