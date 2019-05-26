@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework04</title>
+    <style>
+        img{
+            width: 100%;
+            height: auto;
+            transition: transform 1.5s ease-in-out;
+        }
+        .BIG{
+            width:500px;
+            height: 650px;
+            border: 3px solid #e8e8e8;
+        }
+        .small{
+            width: 500px;
+            height: 600px;
+            transition-timing-function: ease;
+            transition-duration: 1s;
+        }
+        .top{
+            width:500px;
+            height: 365px;
+            overflow: hidden;
+            transition-timing-function: ease;
+            transition-duration: 1s;
+        }       
+        .hid{
+            width: 500px;
+            height: 225px;
+            overflow: hidden;
+            transition-timing-function: ease;
+            transition-duration: 1s;
+        }
+        .p1{
+            color: gray;
+            margin-left:30px;
+            font-size:20px;
+            display: none;
+            transition-timing-function: ease;
+            transition-duration: 1s;
+        }
+        .p2{
+            position: absolute;
+            margin-left: 30px;
+            height: 600;
+            float: left;
+        }
+        .p3{
+            position: absolute;
+            margin-left: 120px;
+            height: 600;
+            float: left;
+        }     
+        h1{
+            margin-left:30px;
+            transition-timing-function: ease;
+            transition-duration: 1s;
+        }
+        h2{
+            color: #ea9b7c;
+            font-weight: normal;
+            margin-left: 35px;            
+            transition-timing-function: ease;
+            transition-duration: 1s;
+        }
+        .BIG:hover{
+            border: 3px solid gray;
+        }
+        .small:hover .top{
+            height: 180px;
+        }
+        .small:hover .top img{
+            BIG-shadow: 0px 0px 10px url("jianqiao.jpg"); 
+            transform: scale(2);
+            opacity:0.5;           
+        }
+        .small:hover .hid .p1{
+            display: block;
+        }
+        .small:hover .hid{
+            height: 390px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="BIG">
+        <div class="small">
+            <div class="top">
+                <img src="zhanqiao.jpg">
+            </div>
+            <div class="hid">
+                <h1>青岛栈桥</h1>
+                <h2>国家AAAA级旅游景区</h2>
+                <p class="p1">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区。
+                青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。
+                桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛.</p>
+            </div>
+        </div>
+        <p class="p2">10分钟前</p>
+        <p class="p3">123评论</p> 
+    </div>
+</body>
+<script>
+</script>
+<ml>
